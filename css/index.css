@@ -11,13 +11,19 @@
     gap: 100px;
 }
 
+.imgdiv{
+    overflow: hidden;
+}
+
 .imgdiv img {
     width: auto;
     height: min(400px);
+    overflow: hidden;
 }
 
 .herosection-text {
     margin-bottom: 80px;
+    overflow: hidden;
 }
 
 .herosection-text span {
@@ -25,6 +31,7 @@
     font-size: 50px;
     font-style: "Poppins";
     font-weight: 500;
+    overflow: hidden;
 }
 
 .herosection-text span::nth-child(2) {
@@ -49,23 +56,50 @@
     }
 }
 
-@media screen and (max-width:723px) {
+@media screen and (max-width:955px) {
     
-    .herosection-text{
-        margin-left: 35px;
+    .herosection-i{
+        gap: 30px;
     }
 }
 
-@media screen and (max-width:608px) {
+@media screen and (max-width:850px) {
+    
+    .herosection-i{
+        gap: 10px;
+    }
+
+    .herosection-text {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width:762px) {
+    
+    .herosection-i{
+        gap: 0px;
+    }
+
+    .imgdiv img{
+        width: auto;
+        height: min(350px);
+    }
+
+    .herosection-text {
+        margin-bottom: 50px;
+    }
+    
+}
+@media screen and (max-width:700px) {
     
     .herosection-i{
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
     }
 
     .imgdiv{
-        width: 100%;
-        height: 70%;
         margin-bottom: 50px;
     }
 
@@ -78,8 +112,10 @@
         width: 100%;
         margin-bottom: 0px;
         margin-left: 0px;
-        height: 20%;
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
+
     }
 
     .herosection-text span {
@@ -88,7 +124,6 @@
         font-family: "Poppins";
         font-weight: 500;
     }
-    
 }
 
 @media screen and (max-height:532px) and (min-height:392px) {
