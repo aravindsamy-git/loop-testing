@@ -168,6 +168,10 @@
     }
 }
 
+.first-div{
+    overflow: hidden;
+}
+
 .text1{
     position: absolute;
     left: 5%;
@@ -232,7 +236,7 @@
 @media screen and (max-width:390px) {
     
     .div-dcs{
-        padding: 30% 10% 0%;
+        padding: 35% 10% 0%;
     }
 
     .div-dcs img{
@@ -240,3 +244,29 @@
         height: min(350px);
     }
 }
+
+.hwd{
+    width: 500px; 
+    height: 507px; 
+    z-index: -2; 
+    position: absolute; 
+    right: -15%; 
+    top: 145vh;
+}
+
+@media screen and (max-width:855px) {
+    .hwd{
+        width: 350px;
+        height: 357px;
+        top: 135vh;
+        right: -10%;
+    }
+}
+
+@media screen and (max-width:660px) {
+    
+    .hwd{
+        right: -15%;
+    }
+}
+
