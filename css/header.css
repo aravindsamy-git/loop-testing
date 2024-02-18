@@ -16,10 +16,11 @@ img {
     pointer-events: none;
 }
 
-img {
-    cursor: default;
+.img1, .img2, .img3 {
+    pointer-events: auto;
 }
 
+  
 a {
     text-decoration: none;
 }

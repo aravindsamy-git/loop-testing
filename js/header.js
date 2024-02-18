@@ -73,10 +73,13 @@ function redirection(targetId) {
 const images = document.querySelectorAll('img');
 
 images.forEach(image => {
-  image.addEventListener('mousedown', (event) => {
-    event.preventDefault();
-  });
+  if (image.id !== 'logo' && image.id !== 'toggle-button' && image.id !== 'toggle-button1') {
+    image.addEventListener('mousedown', (event) => {
+      event.preventDefault();
+    });
+  }
 });
+
 
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
