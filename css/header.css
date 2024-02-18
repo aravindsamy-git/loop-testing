@@ -117,6 +117,7 @@ header {
     align-items: center;
     font-family: "Manrope";
     border-radius: 20px;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -196,6 +197,7 @@ header {
     width: 100%;
     padding: 0% 20% 0%;
     top: 350px;
+    cursor: pointer;
 }
 
 .i-login-btn{
@@ -205,6 +207,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .i-login-btn a{
@@ -212,6 +215,7 @@ header {
     font-family: "manrope";
     font-size: medium;
     font-weight: 700;
+    cursor: pointer;
 }
 
 @media screen and (max-width:1010px) {
