@@ -10,8 +10,3 @@ function heightassign() {
 heightassign();
 window.addEventListener('resize', heightassign);
 
-
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});
-

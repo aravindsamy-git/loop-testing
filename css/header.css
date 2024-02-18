@@ -14,8 +14,11 @@ img {
     -ms-user-select: none;
     user-select: none;
     pointer-events: none;
-  }
-  
+}
+
+img {
+    cursor: default;
+}
 
 a {
     text-decoration: none;
@@ -178,14 +181,14 @@ header {
     cursor: pointer;
 }
 
-.options{
+.options {
     position: absolute;
     top: 100px;
     width: 100%;
     padding: 0% 5% 0%;
 }
 
-.option-li{
+.option-li {
     background: white;
     height: 30px;
     display: flex;
@@ -193,7 +196,7 @@ header {
     cursor: pointer;
 }
 
-.option-li a{
+.option-li a {
     color: black;
     margin-left: 20px;
     font-family: "manrope";
@@ -201,7 +204,7 @@ header {
     font-weight: 500;
 }
 
-.login-btn{
+.login-btn {
     position: absolute;
     width: 100%;
     padding: 0% 20% 0%;
@@ -209,7 +212,7 @@ header {
     cursor: pointer;
 }
 
-.i-login-btn{
+.i-login-btn {
     background: white;
     height: 30px;
     border-radius: 25px;
@@ -219,7 +222,7 @@ header {
     cursor: pointer;
 }
 
-.i-login-btn a{
+.i-login-btn a {
     color: #E94057;
     font-family: "manrope";
     font-size: medium;
@@ -247,14 +250,14 @@ header {
         cursor: pointer;
     }
 
-    .img4{
+    .img4 {
         position: absolute;
         top: 16px;
         left: 16px;
         width: 180px;
         height: 40px;
     }
-    
+
 }
 
 @media screen and (max-width:425px) {
@@ -276,7 +279,7 @@ header {
         cursor: pointer;
     }
 
-    .img4{
+    .img4 {
         position: absolute;
         top: 16px;
         left: 16px;
