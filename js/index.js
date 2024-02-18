@@ -11,7 +11,7 @@ heightassign();
 window.addEventListener('resize', heightassign);
 
 
-const screenWidth = window.innerWidth;
-const screenHeight = window.innerHeight;
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
 
-console.log("Screen Width:", screenWidth, "Screen Height:", screenHeight);
