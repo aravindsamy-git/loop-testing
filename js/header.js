@@ -42,7 +42,6 @@ function checkScreenWidth() {
 
 checkScreenWidth();
 
-
 function redirection(targetId) {
   let redirectUrl;
   switch (targetId) {
@@ -68,7 +67,6 @@ function redirection(targetId) {
       console.error(`Invalid element ID: ${targetId}`);
       return;
   }
-
   window.location.href = redirectUrl;
 }
 
@@ -83,4 +81,3 @@ images.forEach(image => {
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
 });
-
