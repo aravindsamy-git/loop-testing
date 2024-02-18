@@ -6,14 +6,9 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-.imgdiv {
-    display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    gap: 100px;
 }
 
 .imgdiv img {
@@ -22,13 +17,7 @@
 }
 
 .herosection-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
     margin-bottom: 80px;
-    margin-left: 100px;
 }
 
 .herosection-text span {
@@ -96,7 +85,7 @@
     .herosection-text span {
         color: black;
         font-size: 32px;
-        font-family: Poppins;
+        font-family: "Poppins";
         font-weight: 500;
     }
     

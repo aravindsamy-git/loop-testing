@@ -9,3 +9,9 @@ function heightassign() {
 
 heightassign();
 window.addEventListener('resize', heightassign);
+
+
+const screenWidth = window.innerWidth;
+const screenHeight = window.innerHeight;
+
+console.log("Screen Width:", screenWidth, "Screen Height:", screenHeight);
