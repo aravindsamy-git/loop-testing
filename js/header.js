@@ -79,3 +79,8 @@ images.forEach(image => {
     event.preventDefault();
   });
 });
+
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
