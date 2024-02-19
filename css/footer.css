@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 10% 0%;
+}
+
+.first-element{
+    margin-top: 10px;
+}
+
+.socialmedia-con {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.center-element ul li {
+    font-family: "Open Sans";
+    font-size: 22px;
+    font-weight: 600;
+    color: #E94057;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.last-element p{
+    margin: 0;
+}
+
+.last-element{
+    margin-top: 14px;
+}
+
+.last-element p:first-child {
+    color: #E94057;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: "Open Sans";
+}
+
+.email , .phonenumber , .location{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 20px 0px 0px;
+}
+
+.email , .phonenumber , .location p{
+    font-family: "Open Sans";
+}
+
+@media screen and (max-width:780px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0% 0% 0%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0% 0% 0%;
+        gap: 30px;
+    }
+
+}
