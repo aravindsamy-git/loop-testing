@@ -245,28 +245,45 @@
     }
 }
 
-.hwd{
-    width: 500px; 
-    height: 507px; 
-    z-index: -2; 
-    position: absolute; 
-    right: -15%; 
-    top: 145vh;
+.sec-div{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media screen and (max-width:855px) {
-    .hwd{
-        width: 350px;
-        height: 357px;
-        top: 135vh;
-        right: -10%;
+.sec-div-text1{
+    color: black; 
+    font-size: 40px;
+    font-family: "Poppins"; 
+    font-weight: 500; 
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.sec-div-text2{
+    color: rgba(0, 0, 0, 0.60); 
+    font-size: 26px; 
+    font-family: "Poppins"; 
+    font-weight: 400; 
+    text-align: center;
+}
+
+@media screen and (max-width:700px){
+    .sec-div-text1{
+        font-size: 32px;
+    }
+
+    .sec-div-text2{
+        font-size: 22px;
     }
 }
 
-@media screen and (max-width:660px) {
+@media screen and (max-width:500px) {
     
-    .hwd{
-        right: -15%;
+    .sec-div-text2{
+        font-size: 18px;
     }
 }
-
