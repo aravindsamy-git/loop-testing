@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
@@ -112,54 +113,112 @@
         <br>
         <br>
         <br>
-    </main>
 
-    <main style="margin: 0;padding: 0;width: 100%;height: 100vh;display: flex;align-items: center;justify-content: center;padding: 30px 10px;transition: background .4s ease-in; background-color: white; overflow: hidden;">
-        <div class="container">
+        <div class="outer-container">
+            <div class="container">
 
-            <input type="radio" name="slider" id="item-1">
-            <input type="radio" name="slider" id="item-2">
-            <input type="radio" name="slider" id="item-3" checked>
-            <input type="radio" name="slider" id="item-4">
-            <input type="radio" name="slider" id="item-5">
-    
-            <div class="cards">
-    
-                <label class="card" for="item-1" id="sliderimage-1">
-                    <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
-                        alt="song">
-                </label>
-                <label class="card" for="item-2" id="sliderimage-2">
-                    <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
-                        alt="song">
-                </label>
-                <label class="card" for="item-3" id="sliderimage-3">
-                    <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-                        alt="song">
-                </label>
-                <label for="item-4" class="card" id="sliderimage-4">
-                    <img src="media/edgar-IeVY4eBLFZk-unsplash.jpg" alt="song">
-                </label>
-                <label for="item-5" class="card" id="sliderimage-5">
-                    <img src="media/istockphoto-1292972275-1024x1024.jpg" alt="song">
-                </label>
-                
-            </div>
-    
-            <div class="elements-container" style="width: 100%; display: flex; flex-direction: row; justify-content: center;">
-                <button class="control-btn" id="prev-btn">&#10094;</button>
-        
+                <input type="radio" name="slider" id="item-1">
+                <input type="radio" name="slider" id="item-2" checked>
+                <input type="radio" name="slider" id="item-3">
+                <input type="radio" name="slider" id="item-4">
+                <input type="radio" name="slider" id="item-5">
+
+                <div class="cards">
+                    <label class="card" for="item-1" id="sliderimage-1">
+                        <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
+                            alt="song">
+                    </label>
+                    <label class="card" for="item-2" id="sliderimage-2">
+                        <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+                            alt="song">
+                    </label>
+                    <label class="card" for="item-3" id="sliderimage-3">
+                        <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                            alt="song">
+                    </label>
+                    <label for="item-4" class="card" id="sliderimage-4">
+                        <img src="media/edgar-IeVY4eBLFZk-unsplash.jpg" alt="song">
+                    </label>
+                    <label for="item-5" class="card" id="sliderimage-5">
+                        <img src="media/istockphoto-1292972275-1024x1024.jpg" alt="song">
+                    </label>
+                </div>
+
                 <div class="indicator-container">
+                    <button class="control-btn" id="prev-btn">&#10094;</button>
                     <div class="indicator1" id="indicator1"></div>
                     <div class="indicator2" id="indicator2"></div>
                     <div class="indicator3" id="indicator3"></div>
                     <div class="indicator4" id="indicator4"></div>
                     <div class="indicator5" id="indicator5"></div>
+                    <button class="control-btn" id="next-btn">&#10095;</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="joinus-container">
+            <p class="joinusp">Join us in crafting your love story, where every interaction is a step towards finding that special someone who completes you</p>
+            <img src="media/joinus.png" alt="">
+        </div>
+
+        <div class="bottom-footer">
+            <div class="toparrow-container" onclick="scrolltotop()">
+                <img src="media/top-arrow.png" alt="">
+                <p>TOP</p>
+            </div>
+            <footer>
+                <div class="footerfirst-element">
+                    <img src="media/f-logo.png" alt="">
+                    <br>
+                    <br>
+                    <div class="socialmedia-con">
+                        <img src="media/facebook.png" alt="">
+                        <img src="media/twitter.png" alt="">
+                        <img src="media/instagram.png" alt="">
+                        <img src="media/linkedin.png" alt="">
+                        <img src="media/youtube.png" alt="">
+                    </div>
                 </div>
     
-                <button class="control-btn" id="next-btn">&#10095;</button>
+                <div class="footercenter-element">
+                    <ul>
+                        <li onclick="redirection('overview')">Overview</li>
+                        <li onclick="redirection('plans')">Plans</li>
+                        <li onclick="redirection('about')">About</li>
+                        <li onclick="redirection('signup')">Signup</li>
+                    </ul>
+                </div>
+    
+                <div class="footerlast-element">
+                    <p>Contact us</p>
+                    <div class="email">
+                        <img src="media/Email.png" alt="">
+                        <p>Loopsocial@gmail.com</p>
+                    </div>
+    
+                    <div class="phonenumber">
+                        <img src="media/Phone.png" alt="">
+                        <p>91+ 7105652651</p>
+                    </div>
+    
+                    <div class="location">
+                        <img src="media/Mark.png" alt="">
+                        <p>Trichy , India</p>
+                    </div>
+                </div>
+            </footer>
+            <div class="footerline-container">
+                <div class="footer-line"></div>
+                <br>
+                <div class="footerline-content">
+                    <p>Copyright@2024</p>
+                    <p>All Rights Reserved | Terms and Conditions | Privacy Policy</p>
+                </div>
             </div>
         </div>
+
+        <br>
     </main>
     <script src="js/header.js"></script>
     <script src="js/index.js"></script>

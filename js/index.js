@@ -10,3 +10,8 @@ function heightassign() {
 heightassign();
 window.addEventListener('resize', heightassign);
 
+
+function scrolltotop() {
+  const targetPixelPosition = 1;
+  window.scroll({ top: targetPixelPosition, left: 0, behavior: 'smooth' });
+}

@@ -287,3 +287,232 @@
         font-size: 14px;
     }
 }
+
+.joinusp{
+    margin-left: 5%;
+    width: 70%;
+    color: black;
+    font-size: 32px;
+    font-style: "Poppins";
+    font-weight: 500;
+    overflow: hidden;
+    text-align: left;
+}
+
+
+.joinus-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.joinus-container img{
+    position: relative;
+    top: -100px;
+}
+
+@media screen and (max-width:700px) {
+    .joinusp{
+        font-size: 26px;
+    }
+
+    .joinus-container img{
+        width: 150px;
+        height: 150px;
+        margin-left: 24px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .joinusp{
+        position: relative;
+        top: -60px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .joinus-container img{
+        top: -100px;
+    }
+
+    .joinusp{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .joinus-container{
+        flex-direction: column-reverse;
+    }
+
+    .joinus-container img{
+        right: -180px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+.outer-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s ease-in;
+    background-color: #ffffff;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 50%;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+#item-1:checked~.cards #sliderimage-4,
+#item-2:checked~.cards #sliderimage-5,
+#item-3:checked~.cards #sliderimage-1,
+#item-4:checked~.cards #sliderimage-2,
+#item-5:checked~.cards #sliderimage-3 {
+    transform: translateX(-60%) scale(.7);
+    opacity: .1;
+    z-index: 1;
+}
+
+#item-1:checked~.cards #sliderimage-5,
+#item-2:checked~.cards #sliderimage-1,
+#item-3:checked~.cards #sliderimage-2,
+#item-4:checked~.cards #sliderimage-3,
+#item-5:checked~.cards #sliderimage-4 {
+    transform: translateX(-40%) scale(.8);
+    opacity: .8;
+}
+
+#item-1:checked~.cards #sliderimage-2,
+#item-2:checked~.cards #sliderimage-3,
+#item-3:checked~.cards #sliderimage-4,
+#item-4:checked~.cards #sliderimage-5,
+#item-5:checked~.cards #sliderimage-1 {
+    transform: translateX(40%) scale(.8);
+    opacity: .8;
+    z-index: 3;
+}
+
+#item-1:checked~.cards #sliderimage-3,
+#item-2:checked~.cards #sliderimage-4,
+#item-3:checked~.cards #sliderimage-5,
+#item-4:checked~.cards #sliderimage-1,
+#item-5:checked~.cards #sliderimage-2 {
+    transform: translateX(60%) scale(.7);
+    opacity: .1;
+    z-index: -2;
+}
+
+#item-1:checked~.cards #sliderimage-1,
+#item-2:checked~.cards #sliderimage-2,
+#item-3:checked~.cards #sliderimage-3,
+#item-4:checked~.cards #sliderimage-4,
+#item-5:checked~.cards #sliderimage-5 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 5;
+}
+
+#item-1:checked~.cards #sliderimage-1 img,
+#item-2:checked~.cards #sliderimage-2 img,
+#item-3:checked~.cards #sliderimage-3 img,
+#item-4:checked~.cards #sliderimage-4 img,
+#item-5:checked~.cards #sliderimage-5 img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+/* Control buttons */
+.control-btn {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.indicator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: absolute;
+    top: 66%;
+}
+
+.indicator1,
+.indicator2,
+.indicator3,
+.indicator4,
+.indicator5 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #999999;
+    margin: 0 5px;
+}
+
+.indicator1.active,
+.indicator2.active,
+.indicator3.active,
+.indicator4.active,
+.indicator5.active {
+    background-color: #E94057;
+}
+
+@media screen and (max-width:500px) {
+    .card {
+        height: 50%;
+    }
+
+    .cards {
+        margin-bottom: 1px;
+    }
+
+    .indicator-container {
+        margin-top: 1px;
+    }
+
+}

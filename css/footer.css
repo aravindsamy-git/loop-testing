@@ -7,7 +7,7 @@ footer {
     padding: 0% 10% 0%;
 }
 
-.first-element{
+.footerfirst-element{
     margin-top: 10px;
 }
 
@@ -24,24 +24,25 @@ ul {
     padding: 0;
 }
 
-.center-element ul li {
+.footercenter-element ul li {
     font-family: "Open Sans";
     font-size: 22px;
     font-weight: 600;
     color: #E94057;
     margin-bottom: 10px;
     cursor: pointer;
+    margin-top: 18px;
 }
 
-.last-element p{
+.footerlast-element p{
     margin: 0;
 }
 
-.last-element{
+.footerlast-element{
     margin-top: 14px;
 }
 
-.last-element p:first-child {
+.footerlast-element p:first-child {
     color: #E94057;
     font-weight: 700;
     font-size: 22px;
@@ -78,4 +79,53 @@ ul {
         gap: 30px;
     }
 
+}
+
+.toparrow-container {
+    position: relative;
+    width: 30px;
+    margin-left: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.toparrow-container img{
+    width: 100%;
+    height: auto;
+}
+
+.toparrow-container p{
+    font-size: 12px;
+    color: black;
+    font-style: "Poppins";
+    font-weight: 500;
+}
+
+.footerline-container{
+    padding: 0% 10% 0%;
+}
+
+
+.footerline-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-line{
+    width: 100%;
+    height: 0px; 
+    border: 1.20px #D9DBE9 solid ; 
+    margin-top: 100px;
+}
+
+.footerline-content p{
+    font-weight: 200;
+    font-size: 16px;
+    font-family: "Open Sans";
 }
