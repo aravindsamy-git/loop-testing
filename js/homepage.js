@@ -122,3 +122,17 @@ partiesData.forEach(data => {
 
     partiesContainer.appendChild(partyDiv);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    var leftarrow = document.getElementById('left-arrow')
+    var rightarrow = document.getElementById('right-arrow')
+
+    leftarrow.addEventListener('click',function(){
+        console.log('clicked')
+    })
+
+    rightarrow.addEventListener('click',function(){
+        console.log('clicked')
+    })
+});

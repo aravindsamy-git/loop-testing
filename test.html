@@ -4,14 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoopSocial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 250px 1fr 100px;
+            height: 100%;
+        }
+
+        section {
+            display: grid;
+            grid-template-rows: 80px 1fr;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <div class="sidenavbar" id="sidenavbar">
+        <aside>
             <div class="innernavbar">
                 <img class="logo" src="../media/logo.png" alt="">
 
@@ -104,82 +121,84 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="userdetails">
-        </div>
-
-        <div class="messagebar">
-            <div class="message-inner">
-                <div class="message-toggle">
-                    <svg width="20" height="20" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M3.33333 3.33333H30V23.3333H5.28333L3.33333 25.2833V3.33333ZM3.33333 0C1.5 0 0.0166667 1.5 0.0166667 3.33333L0 33.3333L6.66667 26.6667H30C31.8333 26.6667 33.3333 25.1667 33.3333 23.3333V3.33333C33.3333 1.5 31.8333 0 30 0H3.33333ZM6.66667 16.6667H20V20H6.66667V16.6667ZM6.66667 11.6667H26.6667V15H6.66667V11.6667ZM6.66667 6.66667H26.6667V10H6.66667V6.66667Z"
-                            fill="white" />
-                    </svg>
+        </aside>
+        <section>
+            <div class="top-navbar">
+                <div class="userdetails">
                 </div>
             </div>
-        </div>
-
-        <div class="mainelement-div">
-            <div class="swipe-text">
-                <p>Swipes</p>
-                <img src="../media/swipeheart.png" alt="">
-            </div>
-            <div class="swipes">
-            </div>
-            <div class="arrows">
-                <div class="left-arrow" id="left-arrow">
-                    <svg width="15" height="15" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.7804 1.70895L10.0746 0.0126953L0.59668 9.50019L10.0842 18.9877L11.7804 17.2914L3.98918 9.50019L11.7804 1.70895Z" fill="#848484"/>
-                    </svg>
+            <div class="main-element">
+                <div class="swipe-text">
+                    <p>Swipes</p>
+                    <img src="../media/swipeheart.png" alt="">
                 </div>
-                <div class="right-arrow" id="right-arrow">
-                    <svg width="15" height="15" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.21957 17.2911L1.9254 18.9873L11.4033 9.49981L1.91582 0.012307L0.219569 1.70856L8.01082 9.49981L0.21957 17.2911Z" fill="#848484"/>
-                    </svg>
+                <div class="swipes">
+                </div>
+                <div class="arrows">
+                    <div class="left-arrow" id="left-arrow">
+                        <svg width="15" height="15" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.7804 1.70895L10.0746 0.0126953L0.59668 9.50019L10.0842 18.9877L11.7804 17.2914L3.98918 9.50019L11.7804 1.70895Z" fill="#848484"/>
+                        </svg>
+                    </div>
+                    <div class="right-arrow" id="right-arrow">
+                        <svg width="15" height="15" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.21957 17.2911L1.9254 18.9873L11.4033 9.49981L1.91582 0.012307L0.219569 1.70856L8.01082 9.49981L0.21957 17.2911Z" fill="#848484"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="parties-text">
+                    <p>Parties</p>
+                    <img src="../media/swipeheart.png" alt="">
+                </div>
+                <div class="parties">
+                </div>
+    
+                <div class="admain-element">
+                    <div class="addsection">
+                        <div class="subcribe">Subcribe</div>
+                        <div class="Detail" style="width: 270px; position: relative;top:50px">
+                            <div class="GetUnlimitedSwipes" style="left: 9%; top: 0px; position: absolute; color: black; font-size: 22px; font-family: Roboto; font-weight: 700; word-wrap: break-word">Get unlimited Swipes </div>
+                            <div class="Likes" style="left: 9%; top: 40px; position: absolute; color: black; font-size: 15px; font-family: Roboto; font-weight: 700; word-wrap: break-word">& likes</div>
+                          </div>
+                          <div class="joinbutton">Join</div>
+                          <div class="addsvg">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.7617 13.7383H13.6367V23.8633H10.2617V13.7383H0.136719V10.3633H10.2617V0.238281H13.6367V10.3633H23.7617V13.7383Z" fill="white"/>
+                                </svg>
+                          </div>
+                          <div class="addnextpic">
+                            <img src="../media/daredevilfangirl___BrObhz1HzmI___ (1).png" alt="">
+                            <img src="../media/daredevilfangirl___BrObhz1HzmI___ (1).png" alt="">
+                            <img src="../media/daredevilfangirl___BrObhz1HzmI___ (1).png" alt="">
+                          </div>
+    
+                          <div class="imgstack">
+                            <img src="../media/smi1.png" alt="">
+                            <img src="../media/smi2.png" alt="">
+                            <img src="../media/smi3.png" alt="">
+                          </div>
+    
+                          <p>+5 friends are watching</p>
+                    </div>
                 </div>
             </div>
-            <div class="parties-text">
-                <p>Parties</p>
-                <img src="../media/swipeheart.png" alt="">
-            </div>
-            <div class="parties">
-            </div>
-
-            <div class="admain-element">
-                <div class="addsection">
-                    <div class="subcribe">Subcribe</div>
-                    <div class="Detail" style="width: 270px; position: relative;top:50px">
-                        <div class="GetUnlimitedSwipes" style="left: 9%; top: 0px; position: absolute; color: black; font-size: 22px; font-family: Roboto; font-weight: 700; word-wrap: break-word">Get unlimited Swipes </div>
-                        <div class="Likes" style="left: 9%; top: 40px; position: absolute; color: black; font-size: 15px; font-family: Roboto; font-weight: 700; word-wrap: break-word">& likes</div>
-                      </div>
-                      <div class="joinbutton">Join</div>
-                      <div class="addsvg">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M23.7617 13.7383H13.6367V23.8633H10.2617V13.7383H0.136719V10.3633H10.2617V0.238281H13.6367V10.3633H23.7617V13.7383Z" fill="white"/>
-                            </svg>
-                      </div>
-                      <div class="addnextpic">
-                        <img src="../media/daredevilfangirl___BrObhz1HzmI___ (1).png" alt="">
-                        <img src="../media/daredevilfangirl___BrObhz1HzmI___ (1).png" alt="">
-                        <img src="../media/daredevilfangirl___BrObhz1HzmI___ (1).png" alt="">
-                      </div>
-
-                      <div class="imgstack">
-                        <img src="../media/smi1.png" alt="">
-                        <img src="../media/smi2.png" alt="">
-                        <img src="../media/smi3.png" alt="">
-                      </div>
-
-                      <p>+5 friends are watching</p>
+        </section>
+        <aside id="messagenavbar-aside">
+            <div class="messagebar">
+                <div class="message-inner">
+                    <div class="message-toggle">
+                        <svg width="20" height="20" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.33333 3.33333H30V23.3333H5.28333L3.33333 25.2833V3.33333ZM3.33333 0C1.5 0 0.0166667 1.5 0.0166667 3.33333L0 33.3333L6.66667 26.6667H30C31.8333 26.6667 33.3333 25.1667 33.3333 23.3333V3.33333C33.3333 1.5 31.8333 0 30 0H3.33333ZM6.66667 16.6667H20V20H6.66667V16.6667ZM6.66667 11.6667H26.6667V15H6.66667V11.6667ZM6.66667 6.66667H26.6667V10H6.66667V6.66667Z"
+                                fill="white" />
+                        </svg>
+                    </div>
                 </div>
             </div>
-        </div>
+        </aside>
     </main>
 
-    <script src="../js/homepage.js"></script>
+    <script src="js/homepage.js"></script>
 </body>
 
 </html>
-

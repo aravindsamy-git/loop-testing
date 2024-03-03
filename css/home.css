@@ -92,13 +92,14 @@ a {
 
 .messagebar {
     width: 100px;
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     position: absolute;
     top: 25px;
     right: 0;
     background-color: white;
+    z-index: 3;
 }
 
 .message-toggle {
@@ -177,7 +178,7 @@ a {
 }
 
 .swipes {
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -215,7 +216,7 @@ a {
 }
 
 .parties {
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -407,4 +408,23 @@ a {
     position: relative;
     top: -95px;
     left: 225px;
+}
+
+.arrows{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#right-arrow,
+#left-arrow{
+    position: relative;
+    left: 100px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#messagenavbar-aside{
+    background-color: white;
 }
