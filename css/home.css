@@ -7,6 +7,11 @@
 body {
     overflow-x: hidden;
     background-color: white;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 img {
@@ -19,6 +24,18 @@ img {
 
 a {
     text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 250px 1fr 100px;
+    height: 100%;
+    overflow: hidden;
+}
+
+section {
+    display: grid;
+    grid-template-rows: 80px 1fr;
 }
 
 .sidenavbar {
@@ -177,25 +194,6 @@ a {
     height: 30px;
 }
 
-.swipes {
-    width: 80%;
-    overflow: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    display: inline-block;
-}
-
-.swipe {
-    display: inline-block;
-    width: 120px;
-    height: 120px;
-    margin-right: 10px;
-    border-radius: 15px;
-    background-size: cover;
-    background-position: center;
-    margin-top: 15px;
-}
-
 
 .parties-text {
     display: flex;
@@ -226,12 +224,12 @@ a {
 
 .party {
     display: inline-block;
-    width: 180px; 
-    height: 130px; 
-    left: 10px; 
-    top: 10px; 
-    position:relative; 
-    background: white; 
+    width: 180px;
+    height: 130px;
+    left: 10px;
+    top: 10px;
+    position: relative;
+    background: white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
     border-radius: 25px;
     margin-bottom: 2%;
@@ -297,7 +295,7 @@ a {
     z-index: 3;
 }
 
-.admain-element{
+.admain-element {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -305,17 +303,7 @@ a {
     width: 60%;
 }
 
-.addsection{
-    width: 650px;
-    height: 200px;
-    background-image: url("../media/wp4315395-marvels-daredevil-wallpapers\ 1.png");
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 40px;
-}
-
-.subcribe{
+.subcribe {
     padding: 10px;
     position: relative;
     top: 7%;
@@ -331,23 +319,23 @@ a {
     font-size: small;
 }
 
-.joinbutton{
-    color: white; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    width:50px; 
-    height: 27px; 
-    background: #E94057; 
-    border-radius: 7px; 
-    font-family: "Roboto"; 
+.joinbutton {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 27px;
+    background: #E94057;
+    border-radius: 7px;
+    font-family: "Roboto";
     font-size: x-small;
     position: relative;
     top: 120px;
     left: 5%;
 }
 
-.addsvg{
+.addsvg {
     position: relative;
     top: 96px;
     left: 17%;
@@ -360,24 +348,24 @@ a {
     border-radius: 5px;
 }
 
-.addnextpic{
+.addnextpic {
     position: relative;
     top: 70px;
     left: 63%;
 }
 
-.addnextpic img{
-    width:50px;
+.addnextpic img {
+    width: 50px;
     height: 30px;
 }
 
-.imgstack{
+.imgstack {
     position: relative;
     top: -100px;
     left: 160px;
 }
 
-.imgstack img{
+.imgstack img {
     position: absolute;
     width: 25px;
     height: 25px;
@@ -401,7 +389,7 @@ a {
     z-index: 3;
 }
 
-.admain-element p{
+.admain-element p {
     font-family: "Roboto";
     font-size: x-small;
     font-weight: bold;
@@ -410,21 +398,249 @@ a {
     left: 225px;
 }
 
-.arrows{
+#messagenavbar-aside {
+    background-color: white;
+}
+
+#cCarousel {
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+}
+
+#carousel-vp {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+#cCarousel #cCarousel-inner {
+    display: flex;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    gap: 10px;
+    left: 0px;
+}
+
+.cCarousel-item {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    margin-top: 15px;
+}
+
+.arrows {
     display: flex;
     flex-direction: row;
-    cursor: pointer;
-    z-index: 2;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 10px;
+    margin-top: 12px;
 }
 
-#right-arrow,
-#left-arrow{
+#parties-cCarousel {
     position: relative;
-    left: 100px;
+    margin: auto;
     cursor: pointer;
-    z-index: 2;
 }
 
-#messagenavbar-aside{
-    background-color: white;
+#parties-carousel-vp {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+#parties-carousel-vp #parties-cCarousel-inner {
+    display: flex;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    gap: 10px;
+    left: 0px;
+}
+
+.parties-cCarousel-item {
+    width: 180px;
+    height: 130px;
+    margin-right: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    margin-top: 15px;
+    position: relative;
+    background: white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
+    border-radius: 25px;
+    margin-bottom: 2%;
+}
+
+.parties-arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 10px;
+}
+
+
+.parties-left-arrow svg path,
+.parties-right-arrow svg path,
+.left-arrow svg path,
+.right-arrow svg path{
+    fill: #848484;
+}
+
+
+.parties-left-arrow:hover svg path,
+.parties-right-arrow:hover svg path,
+.left-arrow:hover svg path,
+.right-arrow:hover svg path{
+    fill: #E94057;
+}
+
+.parties-left-arrow:hover svg ,
+.parties-right-arrow:hover svg ,
+.left-arrow:hover svg ,
+.right-arrow:hover svg {
+    transform: translate3d(0px, -0px, 0) rotateY(0deg) scale(1.25);
+}
+
+
+@media screen and (max-width:1000px) {
+    .innernavbar{
+        display: none;
+    }
+
+    .messagebar{
+        display: none;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 0px 1fr 0px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #elements{
+        padding: 0px 4% 0px;
+    }
+
+    .navbarimg{
+        display: block !important;
+        width: 200px;
+        height: 48px;
+        cursor: pointer;
+        margin-left: 2%;
+        position: absolute;
+        top: 5px;
+    }
+
+    .message-togglel{
+        display: flex !important;
+    }
+
+    .userdetails{
+        top: 15px;
+    }
+
+    #arrowsvg{
+        display: block !important;
+        position: relative;
+        top: 65px;
+        left: 17px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:668px) {
+    .addvertise-element-card {
+        width: 100% !important;
+        height: 100% !important;
+        background-image: url("../media/wp4315395-marvels-daredevil-wallpapers\ 1.png");
+        background-size: contain !important;
+        background-repeat: no-repeat;
+    }
+}
+
+.addvertise-element{
+    display: flex;
+    justify-content: center;
+}
+
+.addvertise-element-card{
+    width: 650px;
+    height: 90%;
+    background-image: url("../media/wp4315395-marvels-daredevil-wallpapers\ 1.png");
+    background-size: cover;
+    border-radius: 40px;
+}
+
+.navbarimg{
+    display: none;
+}
+
+.message-togglel {
+    width: 50px;
+    height: 50px;
+    background-color: #FC466B;
+    border-radius: 25px;
+    box-shadow: 2px 10px 20px rgba(255, 49.94, 49.94, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    display: none;
+}
+
+
+#userdetailsoption{
+    display: none;
+}
+
+@media screen and (max-width:550px) {
+    #userdetailsoption{
+        display: flex;
+    }
+
+    #userdetails{
+        display: none;
+    }
+
+    .navbarimg{
+        width: 170px;
+        height: auto;
+    }
+
+    .message-togglel{
+        width: 35px;
+        height: 35px;
+        top: 12px;
+    }
+
+    .message-togglel svg{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+#arrowsvg{
+    display: none;
 }

@@ -1,0 +1,148 @@
+.swipes {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.swipes-items {
+    display: flex;
+    transition: left 0.3s ease;
+    gap: 10px;
+    left: 0px;
+}
+
+.arrows{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.swipes:hover .arrows{
+    display: flex;
+}
+
+#left-arrow,
+#right-arrow{
+    cursor: pointer;
+}
+
+#left-arrow{
+    height: 118px;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#right-arrow{
+    height: 118px;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#left-arrow:hover svg path,
+#right-arrow:hover svg path{
+    fill: #ffffff;
+}
+
+#left-arrow:hover svg,
+#right-arrow:hover svg{
+    width: 25px;
+    height: 25px;
+}
+
+.swipe {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 15px;
+    flex: 0 0 auto;
+}
+
+
+                <div class="swipes" id="swipes">
+                    <div class="swipes-items" id="swipes-items">
+                        <div class="swipes-items-inner" id="swipes-items-inner">
+
+                        </div>
+                    </div>
+                    <div class="arrows">
+                        <div class="left-arrow" id="left-arrow">
+                            <svg width="15" height="15" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.7804 1.70895L10.0746 0.0126953L0.59668 9.50019L10.0842 18.9877L11.7804 17.2914L3.98918 9.50019L11.7804 1.70895Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div class="right-arrow" id="right-arrow">
+                            <svg width="15" height="15" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.21957 17.2911L1.9254 18.9873L11.4033 9.49981L1.91582 0.012307L0.219569 1.70856L8.01082 9.49981L0.21957 17.2911Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const images = ['../media/ssi.png', '../media/ssi.png', '../media/ssi.png', '../media/ssi.png', '../media/ssi.png', '../media/ssi.png', '../media/ssi.png', '../media/ssi.png', '../media/ssi.png', '../media/ssi.png', '../media/ssi.png', '../media/ssi.png'];
+    images.forEach(image => {
+        const swipe = document.createElement('div');
+        swipe.classList.add('swipe');
+        swipe.style.backgroundImage = `url('${image}')`;
+        document.getElementById("swipes-items-inner").appendChild(swipe);
+    });
+    calculateRemainingWidthPercentage();
+});
+
+function calculateRemainingWidthPercentage() {
+    var screenWidth = window.innerWidth;
+    var remainingWidth = screenWidth - 350;
+    var swipes = document.getElementById("swipes-items-inner");
+    swipes.style.maxWidth = remainingWidth + 'px';
+}
+
+window.addEventListener('resize', calculateRemainingWidthPercentage);
+
+// Add JavaScript for carousel navigation
+const leftArrow = document.getElementById('left-arrow');
+const rightArrow = document.getElementById('right-arrow');
+const swipesItemsInner = document.getElementById('swipes-items-inner');
+
+let currentIndex = 0;
+const maxIndex = document.querySelectorAll('.swipe').length - 1;
+const swipeWidth = document.querySelector('.swipe').offsetWidth;
+
+function slide(direction) {
+    if (direction === 'left') {
+        currentIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+    } else {
+        currentIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+    }
+    swipesItemsInner.style.transform = `translateX(-${currentIndex * swipeWidth}px)`;
+}
+
+leftArrow.addEventListener('click', () => slide('left'));
+rightArrow.addEventListener('click', () => slide('right'));
