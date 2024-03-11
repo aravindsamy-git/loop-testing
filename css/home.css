@@ -7,8 +7,6 @@
 body {
     overflow-x: hidden;
     background-color: white;
-    width: 100vw;
-    height: 100vh;
     padding: 0;
     margin: 0;
 }
@@ -29,7 +27,6 @@ main {
     display: grid;
     grid-template-columns: 250px 1fr 100px;
     height: 100%;
-    overflow: hidden;
 }
 
 section {
@@ -205,6 +202,7 @@ section {
     color: #848484;
     font-size: medium;
     font-weight: bold;
+
 }
 
 .parties-text img {
@@ -421,7 +419,7 @@ section {
     display: flex;
     position: absolute;
     transition: 0.3s ease-in-out;
-    gap: 10px;
+    gap: 15px;
     left: 0px;
 }
 
@@ -455,37 +453,37 @@ section {
 
 #parties-carousel-vp {
     width: 100%;
-    height: 130px;
+    height: 160px;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-    margin: auto;
+    margin-top: 10px;
 }
 
 #parties-carousel-vp #parties-cCarousel-inner {
     display: flex;
     position: absolute;
     transition: 0.3s ease-in-out;
-    gap: 10px;
+    gap: 15px;
     left: 0px;
+    margin-left: 10px;
 }
 
 .parties-cCarousel-item {
     width: 180px;
     height: 130px;
-    margin-right: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     background-size: cover;
     background-position: center;
-    margin-top: 15px;
     position: relative;
     background: white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
     border-radius: 25px;
     margin-bottom: 2%;
+    margin-top: 15px;
 }
 
 .parties-arrows {
@@ -522,7 +520,7 @@ section {
 
 @media screen and (max-width:1000px) {
     .innernavbar{
-        display: none;
+        display: none ;
     }
 
     .messagebar{
@@ -531,13 +529,12 @@ section {
 
     main {
         display: grid;
-        grid-template-columns: 0px 1fr 0px;
+        grid-template-columns: 1fr;
         height: 100%;
-        overflow: hidden;
     }
 
     #elements{
-        padding: 0px 4% 0px;
+        margin-left: 4%;
     }
 
     .navbarimg{
@@ -545,25 +542,56 @@ section {
         width: 200px;
         height: 48px;
         cursor: pointer;
-        margin-left: 2%;
         position: absolute;
-        top: 5px;
+        top: 13px;
+        margin-left: 25px;
+    }
+
+    .messagesidebar{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        transition: right 0.2s ease-in-out;
+    }
+
+    .messagesidebart{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.2s ease-in-out;
+        cursor: pointer;
     }
 
     .message-togglel{
         display: flex !important;
     }
 
+    .message-togglelt{
+        display: flex !important;
+    }
+
     .userdetails{
-        top: 15px;
+        top: 25px;
     }
 
     #arrowsvg{
         display: block !important;
         position: relative;
-        top: 65px;
-        left: 17px;
+        top: 70px;
+        left: 23px;
         cursor: pointer;
+    }
+
+    .sidenavbar{
+        display: block !important;
+        position: absolute;
+        top: 13px;
+        margin-left: 25px;
+        background-color: white;
+        z-index: 10;
+        left: -230px;
+        transition: left 0.3s ease-in-out;
     }
 }
 
@@ -594,6 +622,30 @@ section {
     display: none;
 }
 
+.messagesidebar{
+    position: absolute;
+    top: 25px;
+    width: 100px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    transition: right 0.2s ease-in-out;
+}
+
+
+.messagesidebart{
+    position: absolute;
+    top: 25px;
+    width: 100px;
+    right: -100px;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    z-index: 10;
+    transition: right 0.2s ease-in-out;
+}
+
+
 .message-togglel {
     width: 50px;
     height: 50px;
@@ -603,12 +655,27 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 10px;
-    top: 15px;
     display: none;
+    margin-bottom: 12px;
 }
 
+.message-togglelt {
+    width: 50px;
+    height: 50px;
+    background-color: #FC466B;
+    border-radius: 25px;
+    box-shadow: 2px 10px 20px rgba(255, 49.94, 49.94, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin-bottom: 12px;
+}
+
+.messagesidebar-inner{
+    background-color: white;
+    z-index: 10;
+}
 
 #userdetailsoption{
     display: none;
@@ -641,5 +708,16 @@ section {
 }
 
 #arrowsvg{
+    display: none;
+}
+
+#sidearrow{
+    margin-top: 5px;
+    position: absolute;
+    left: -2px;
+    cursor: pointer;
+}
+
+.sidenavbar{
     display: none;
 }

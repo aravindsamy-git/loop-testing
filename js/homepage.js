@@ -216,11 +216,20 @@ window.addEventListener('resize', calculateRemainingWidthPercentage);
 
 const imageUrls = ['../media/smi1.png', '../media/smi2.png', '../media/smi3.png', '../media/smi4.png', '../media/smi5.png'];
 const messageInner = document.querySelector('.message-inner');
+const messagesidebarinner = document.getElementById("messagesidebar-inner")
+
 imageUrls.forEach(url => {
     const messageProfile = document.createElement('div');
     messageProfile.classList.add('messageprofile');
     messageProfile.style.backgroundImage = `url('${url}')`;
     messageInner.appendChild(messageProfile);
+});
+
+imageUrls.forEach(url => {
+    const messageProfile = document.createElement('div');
+    messageProfile.classList.add('messageprofile');
+    messageProfile.style.backgroundImage = `url('${url}')`;
+    messagesidebarinner.appendChild(messageProfile);
 });
 
 const userData = {
@@ -269,36 +278,31 @@ userdetailoptiondiv.appendChild(userProfileImgo);
 userdetailoptiondiv.appendChild(userDetailsTextDivo);
 
 
-function calculateMainElementHeight() {
-    const mainElement = document.getElementById('main-element');
-    const mainelement = document.getElementById("elements")
-    const addvertiseelement = document.getElementById("addvertise-element")
-    
-    var screenWidth = window.innerWidth;
+document.addEventListener("DOMContentLoaded" , function(){
+    const arrowsvg = document.getElementById("arrowsvg")
+    const sidebar = document.getElementById("sidenavbar")
+    const sidearrow = document.getElementById("sidearrow")
 
-    const mainHeight = mainElement.offsetHeight;
-    const elementheight = mainelement.offsetHeight;
-    const addvertiseelementheight = mainHeight - elementheight
+    arrowsvg.addEventListener("click" , function(){
+        sidebar.style.left = 0 + "px"
+    })
 
-
-    if(screenWidth > 668){
-        addvertiseelement.style.height = addvertiseelementheight + "px"
-    }
-    else{
-        addvertiseelement.style.height = "100%"
-    }
-    
-}
-
-calculateMainElementHeight()
-
-window.addEventListener('resize', calculateMainElementHeight);
+    sidearrow.addEventListener("click" , function(){
+        sidebar.style.left = "-230" + "px"
+    })
+})
 
 document.addEventListener("DOMContentLoaded" , function(){
 
-    const arrowsvg = document.getElementById("arrowsvg")
+    const toggle1 = document.getElementById("message-togglel")
+    const toggle2 = document.getElementById("message-togglelt")
+    const messagesidebar = document.getElementById("messagesidebart")
 
-    arrowsvg.addEventListener("click" , function(){
-        
+    toggle1.addEventListener("click" , function(){
+        messagesidebar.style.right = 0 + "px"
+    })
+
+    toggle2.addEventListener("click" , function(){
+        messagesidebar.style.right = "-100" + "px"
     })
 })
