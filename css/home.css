@@ -11,7 +11,6 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 img {
@@ -442,10 +441,10 @@ section {
 .arrows {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
+    width: 98%;
     gap: 10px;
     margin-top: 12px;
+    justify-content: right;
 }
 
 #parties-cCarousel {
@@ -493,7 +492,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 100%;
+    width: 98%;
     gap: 10px;
 }
 
