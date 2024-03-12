@@ -299,10 +299,12 @@ document.addEventListener("DOMContentLoaded" , function(){
     const messagesidebar = document.getElementById("messagesidebart")
 
     toggle1.addEventListener("click" , function(){
+        messagesidebar.style.display = "flex"
         messagesidebar.style.right = 0 + "px"
     })
 
     toggle2.addEventListener("click" , function(){
+        messagesidebar.style.display = "none"
         messagesidebar.style.right = "-100" + "px"
     })
 })

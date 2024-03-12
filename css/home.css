@@ -35,7 +35,7 @@ section {
 }
 
 .sidenavbar {
-    width: 210px;
+    width: 230px;
 }
 
 .innernavbar {
@@ -152,6 +152,11 @@ section {
     background-size: cover;
 }
 
+.userprofileo{
+    width: 40px;
+    height: 40px;
+}
+
 .username {
     font-family: "Roboto";
     color: #000000;
@@ -163,6 +168,14 @@ section {
     font-family: "Roboto";
     color: #848484;
     font-size: medium;
+}
+
+.usernameo{
+    font-size: medium !important;
+}
+
+.userstatuso{
+    font-size: medium !important;
 }
 
 .mainelement-div {
@@ -552,14 +565,14 @@ section {
         flex-direction: column;
         align-items: center;
         cursor: pointer;
-        transition: right 0.2s ease-in-out;
+        transition: right 0.5s ease-in-out;
     }
 
     .messagesidebart{
-        display: flex !important;
+        display: none;
         flex-direction: column;
         align-items: center;
-        transition: right 0.2s ease-in-out;
+        transition: right 0.5s ease-in-out;
         cursor: pointer;
     }
 
@@ -587,7 +600,6 @@ section {
         display: block !important;
         position: absolute;
         top: 13px;
-        margin-left: 25px;
         background-color: white;
         z-index: 10;
         left: -230px;
@@ -626,7 +638,7 @@ section {
     position: absolute;
     top: 25px;
     width: 100px;
-    right: 0;
+    right: 15px;
     display: none;
     flex-direction: column;
     transition: right 0.2s ease-in-out;
@@ -698,12 +710,40 @@ section {
     .message-togglel{
         width: 35px;
         height: 35px;
-        top: 12px;
     }
 
     .message-togglel svg{
         width: 15px;
         height: 15px;
+    }
+
+    .innersidenavbar .logo{
+        width: 170px;
+        height: auto;
+    }
+
+    .messagesidebar{
+        top: 19px;
+    }
+
+    .messagesidebart{
+        top: 19px;
+        height: 100%;
+    }
+
+    .message-togglelt{
+        width: 35px;
+        height: 35px;
+    }
+
+    .message-togglelt svg{
+        width: 15px;
+        height: 15px;
+    }
+
+    .messageprofile{
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -712,7 +752,7 @@ section {
 }
 
 #sidearrow{
-    margin-top: 5px;
+    margin-top: 16px;
     position: absolute;
     left: -2px;
     cursor: pointer;
@@ -720,4 +760,12 @@ section {
 
 .sidenavbar{
     display: none;
+}
+
+.innersidenavbar{
+    margin-left: 25px;
+}
+
+.innersidenavbar #sidearrow{
+    margin-left: 25px;
 }
